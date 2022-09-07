@@ -87,9 +87,9 @@ ext_modules = [
 print('Skipping GPU_NMS')
 
 setup(
-    name="cython_insightface", #'frcnn_cython',
+    name='frcnn_cython',
     ext_modules=ext_modules,
-    packages=["cython_insightface"],
+    packages=["frcnn_cython"],
     # inject our custom trigger
     cmdclass={'build_ext': custom_build_ext},
 )
