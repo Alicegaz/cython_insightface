@@ -7,6 +7,7 @@
 
 import os
 from os.path import join as pjoin
+import setuptools
 from setuptools import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
@@ -88,6 +89,7 @@ print('Skipping GPU_NMS')
 setup(
     name='frcnn_cython',
     ext_modules=ext_modules,
+    packages=setuptools.find_packages(),
     # inject our custom trigger
     cmdclass={'build_ext': custom_build_ext},
 )
